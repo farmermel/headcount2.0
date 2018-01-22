@@ -4,19 +4,24 @@ export default class DistrictRepository {
   }
 
   cleanData(data) {
-    return data.reduce( (cleanedData, dataPoint) => {
-      if(!cleanedData[dataPoint.Location]) {
-        cleanedData[dataPoint.Location] = {};
-      }
+    return data.reduce((cleanedData, dataPoint) => {
+      const location = dataPoint.Location.toUpperCase();
+
+      cleanedData[location] = {
+        ...cleanedData[location],
+        location: location
+      };
+
+      cleanedData[location].data = {
+        ...cleanedData[location].data,
+        [dataPoint.TimeFrame]: Math.round(dataPoint.Data * 1000) / 1000 || 0
+      };
 
       return cleanedData;
-    }, {})
+    }, {});
+  }
+
+  findByName(input = '') {
+    return this.data[input.toUpperCase()];
   }
 }
-
-
-// Colorado: {
-//   Location: Colorado,
-//   2005: 0.3456245,
-//   2006:
-// }
