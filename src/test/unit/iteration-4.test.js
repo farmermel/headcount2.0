@@ -1,7 +1,7 @@
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../../data/kindergartners_in_full_day_program.js';
 
-describe('DistrictRepository iteration 0', () =>  {
+describe('DistrictRepository iteration 4', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('findAverage for ACADEMY 20', () => {
@@ -22,5 +22,4 @@ describe('DistrictRepository iteration 0', () =>  {
     const result = { "ACADEMY 20": 0.407, "COLORADO": 0.53, "compared": 0.768}
     expect(district.compareDistrictAverages('ACADEMY 20', 'Colorado')).toEqual(result);
   });
-
 });
