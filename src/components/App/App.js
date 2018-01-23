@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CardContainer from "../CardContainer/CardContainer";
-import DistrictRepository from "../../helper";
+import CardContainer from '../CardContainer/CardContainer';
+import DistrictRepository from '../../helper';
 import kinderData from '../../data/kindergartners_in_full_day_program';
 import './App.css';
 
@@ -9,18 +9,18 @@ class App extends Component {
     super();
     this.state = {
       districts: []
-    }
+    };
   }
 
   componentDidMount() {
     const districts = new DistrictRepository(kinderData).findAllMatches();
-    this.setState({districts})
+    this.setState({ districts });
   }
-  
+
   render() {
     return (
       <div>
-        <CardContainer districts={this.state.districts}/>
+        <CardContainer districts={this.state.districts} />
       </div>
     );
   }
