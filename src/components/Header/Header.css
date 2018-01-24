@@ -1,7 +1,8 @@
-header h1 {
+header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   font-family: 'Roboto', sans-serif;
   height: 200px;
 }
