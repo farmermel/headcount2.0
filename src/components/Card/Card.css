@@ -1,7 +1,7 @@
 .card {
   width: 200px;
   margin: 20px 10px;
-  border: magenta 1px solid;
+  border: #000 1px solid;
 }
 
 h3 {
@@ -9,9 +9,9 @@ h3 {
 }
 
 .above {
-  color: blue;
+  color: #4e7fe0;
 }
 
 .below {
-  color: red;
+  color: #b51e35;
 }
