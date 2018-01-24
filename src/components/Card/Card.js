@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = ({ location, data }) => {
   const dataArray = Object.keys(data).map(year => {
@@ -17,6 +18,11 @@ const Card = ({ location, data }) => {
       <ul>{dataArray}</ul>
     </div>
   );
+};
+
+Card.propTypes = {
+  location: PropTypes.string,
+  data: PropTypes.objectOf(PropTypes.number)
 };
 
 export default Card;

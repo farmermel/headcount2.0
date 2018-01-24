@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    data={
+        Object {
+            "2014": 0.4,
+            "2015": 0.8,
+          }
+    }
+    location="Montana"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        "Montana",
+        <ul>
+          <li
+                    className="below"
+          >
+                    2014
+                    : 
+                    0.4
+          </li>
+          <li
+                    className="above"
+          >
+                    2015
+                    : 
+                    0.8
+          </li>
+</ul>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      "Montana",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="below"
+>
+              2014
+              : 
+              0.4
+</li>,
+            <li
+              className="above"
+>
+              2015
+              : 
+              0.8
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "2014",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2014",
+                ": ",
+                0.4,
+              ],
+              "className": "below",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2014",
+              ": ",
+              0.4,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2015",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2015",
+                ": ",
+                0.8,
+              ],
+              "className": "above",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2015",
+              ": ",
+              0.8,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          "Montana",
+          <ul>
+            <li
+                        className="below"
+            >
+                        2014
+                        : 
+                        0.4
+            </li>
+            <li
+                        className="above"
+            >
+                        2015
+                        : 
+                        0.8
+            </li>
+</ul>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        "Montana",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="below"
+>
+                2014
+                : 
+                0.4
+</li>,
+              <li
+                className="above"
+>
+                2015
+                : 
+                0.8
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "2014",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2014",
+                  ": ",
+                  0.4,
+                ],
+                "className": "below",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2014",
+                ": ",
+                0.4,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2015",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2015",
+                  ": ",
+                  0.8,
+                ],
+                "className": "above",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2015",
+                ": ",
+                0.8,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

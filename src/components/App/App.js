@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardContainer from '../CardContainer/CardContainer';
 import DistrictRepository from '../../helper';
-import kinderData from '../../../data/kindergartners_in_full_day_program';
+import kinderData from '../../data/kindergartners_in_full_day_program';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +14,7 @@ class App extends Component {
 
   componentDidMount() {
     const districts = new DistrictRepository(kinderData).findAllMatches();
+    
     this.setState({ districts });
   }
 
