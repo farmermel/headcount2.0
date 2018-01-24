@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const Card = ({ location, data }) => {
+const Card = ({ location, data, compare }) => {
   const dataArray = Object.keys(data).map(year => {
     const klassName = data[year] > 0.5 ? 'above' : 'below';
 
@@ -14,7 +14,8 @@ const Card = ({ location, data }) => {
   });
 
   return (
-    <div className='card'>
+    <div className='card'
+         onClick={() => compare(location)}>
       <h3>{location}</h3>
       <ul>{dataArray}</ul>
     </div>
