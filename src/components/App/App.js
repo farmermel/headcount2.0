@@ -31,7 +31,9 @@ class App extends Component {
 
   handleClick = (district) => {
     const toCompare = this.state.allDistricts.findByName(district);
-    this.setState({compare: [...this.state.compare, toCompare]})
+    const firstCard = this.state.compare[1] || null;
+    
+    this.setState({compare: [firstCard, toCompare]})
   }
   
   render() {
@@ -39,7 +41,8 @@ class App extends Component {
       <div>
         <Header searchDistricts={this.searchDistricts} />
         <ComparisonContainer />
-        <CardContainer districts={this.state.districts} />
+        <CardContainer districts={this.state.districts}
+                       compare={this.handleClick} />
       </div>
     );
   }
