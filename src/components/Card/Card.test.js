@@ -20,6 +20,6 @@ describe('Card', () => {
   it('should receive className based on value of data above/below 0.5', () => {
     expect(wrapper.find('.above').length).toEqual(1);
     expect(wrapper.find('.below').length).toEqual(1);
-    //is there a not dumb way to be explicit about the values
+  //is there a not dumb way to be explicit about the values
   })
 })
