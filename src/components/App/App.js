@@ -31,7 +31,7 @@ class App extends Component {
 
   handleClick = (district) => {
     const toCompare = this.state.allDistricts.findByName(district);
-    this.setState([...compare, toCompare])
+    this.setState({compare: [...this.state.compare, toCompare]})
   }
   
   render() {
