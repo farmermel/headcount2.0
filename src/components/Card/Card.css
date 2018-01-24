@@ -1,0 +1,17 @@
+.card {
+  width: 200px;
+  margin: 20px 10px;
+  border: magenta 1px solid;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.above {
+  color: blue;
+}
+
+.below {
+  color: red;
+}
