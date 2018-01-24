@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CardContainer from '../CardContainer/CardContainer';
 import Header from '../Header/Header';
+import ComparisonContainer from '../ComparisonContainer/ComparisonContainer';
 import DistrictRepository from '../../helper';
 import kinderData from '../../data/kindergartners_in_full_day_program';
 import './App.css';
@@ -10,7 +11,8 @@ class App extends Component {
     super();
     this.state = {
       districts: [],
-      allDistricts: {}
+      allDistricts: {},
+      compare: []
     };
   }
 
@@ -27,10 +29,16 @@ class App extends Component {
     this.setState({ districts });
   };
 
+  handleClick = (district) => {
+    const toCompare = this.state.allDistricts.findByName(district);
+    this.setState([...compare, toCompare])
+  }
+  
   render() {
     return (
       <div>
         <Header searchDistricts={this.searchDistricts} />
+        <ComparisonContainer />
         <CardContainer districts={this.state.districts} />
       </div>
     );
