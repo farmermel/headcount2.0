@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Card.css';
 
 const Card = ({ location, data }) => {
   const dataArray = Object.keys(data).map(year => {
@@ -13,8 +14,8 @@ const Card = ({ location, data }) => {
   });
 
   return (
-    <div>
-      {location}
+    <div className='card'>
+      <h3>{location}</h3>
       <ul>{dataArray}</ul>
     </div>
   );
