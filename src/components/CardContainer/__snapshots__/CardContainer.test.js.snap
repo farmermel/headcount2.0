@@ -30,6 +30,7 @@ ShallowWrapper {
           cow="moo"
 />,
       ],
+      "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
@@ -58,6 +59,7 @@ ShallowWrapper {
             cow="moo"
 />,
         ],
+        "className": "card-container",
       },
       "ref": null,
       "rendered": Array [
