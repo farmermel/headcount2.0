@@ -27,7 +27,7 @@ export default class DistrictRepository {
   }
 
   findAllMatches(input) {
-    const districtsArray = Object.keys(this.data).map( district => {
+    const districtsArray = Object.keys(this.data).map(district => {
       return this.data[district];
     });
 
@@ -35,7 +35,7 @@ export default class DistrictRepository {
       return districtsArray;
     }
 
-    return districtsArray.filter( district => {
+    return districtsArray.filter(district => {
       return district.location.includes(input.toUpperCase());
     });
   }
@@ -43,19 +43,19 @@ export default class DistrictRepository {
   findAverage(district) {
     district = district.toUpperCase();
     const keys = Object.keys(this.data[district].data);
-    const sum = keys.reduce( (total, year) => {
+    const sum = keys.reduce((total, year) => {
       total += this.data[district].data[year];
       return total;
-    }, 0)
+    }, 0);
 
-    return this.roundToThousandth(sum/keys.length);
+    return this.roundToThousandth(sum / keys.length);
   }
 
   findRatio(district1, district2) {
     const avg1 = this.findAverage(district1);
     const avg2 = this.findAverage(district2);
 
-    return this.roundToThousandth(avg1/avg2);
+    return this.roundToThousandth(avg1 / avg2);
   }
 
   roundToThousandth(number) {
@@ -63,11 +63,11 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages(district1, district2) {
-    const avg = { 
+    const avg = {
       [district1.toUpperCase()]: this.findAverage(district1),
       [district2.toUpperCase()]: this.findAverage(district2),
-      compared: this.findRatio(district1, district2) 
-    }
+      compared: this.findRatio(district1, district2)
+    };
 
     return avg;
   }
