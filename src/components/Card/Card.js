@@ -7,7 +7,8 @@ const Card = ({ location, data, compare }) => {
     const klassName = data[year] > 0.5 ? 'above' : 'below';
 
     return (
-      <li key={year} className={klassName}>
+      <li key={year} 
+          className={klassName}>
         {year}: {data[year]}
       </li>
     );
