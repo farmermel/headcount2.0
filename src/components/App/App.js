@@ -11,39 +11,53 @@ class App extends Component {
     super();
     this.state = {
       districts: [],
-      //call allDistricts districtRepository
-      allDistricts: {},
+      districtRepository: {},
       compare: []
     };
   }
 
   componentDidMount() {
-    const allDistricts = new DistrictRepository(kinderData);
-    const districts = allDistricts.findAllMatches();
+    const districtRepository = new DistrictRepository(kinderData);
+    const districts = districtRepository.findAllMatches();
 
-    this.setState({ districts, allDistricts });
+    this.setState({ districts, districtRepository });
   }
 
   searchDistricts = input => {
-    const districts = this.state.allDistricts.findAllMatches(input);
+    const districts = this.state.districtRepository.findAllMatches(input);
 
     this.setState({ districts });
   };
 
   handleClick = district => {
-    const toCompare = this.state.allDistricts.findByName(district);
-    const firstCard = this.state.compare[1] || null;
+    const toCompare = this.state.districtRepository.findByName(district);
+    toCompare.selected = !toCompare.selected;
+    let compare = this.state.districts.filter(district => district.selected);
+    compare.length > 2
+      ? this.removefirstCard(compare)
+      : this.setState({ compare });
+  };
 
-    this.setState({compare: [firstCard, toCompare]})
-  }
-  
+  removefirstCard = compareArray => {
+    let firstCard = compareArray.shift();
+    firstCard.selected = false;
+    const districts = this.state.districts.map(district => {
+      return district.location === firstCard.location
+        ? (district = firstCard)
+        : district;
+    });
+    this.setState({ compare: compareArray, districts });
+  };
+
   render() {
     return (
       <div>
         <Header searchDistricts={this.searchDistricts} />
         <ComparisonContainer />
-        <CardContainer districts={this.state.districts}
-                       compare={this.handleClick} />
+        <CardContainer
+          districts={this.state.districts}
+          compare={this.handleClick}
+        />
       </div>
     );
   }
