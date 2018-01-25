@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       districts: [],
+      //call allDistricts districtRepository
       allDistricts: {},
       compare: []
     };
@@ -29,10 +30,10 @@ class App extends Component {
     this.setState({ districts });
   };
 
-  handleClick = (district) => {
+  handleClick = district => {
     const toCompare = this.state.allDistricts.findByName(district);
     const firstCard = this.state.compare[1] || null;
-    
+
     this.setState({compare: [firstCard, toCompare]})
   }
   
