@@ -6,9 +6,11 @@ import { shallow, mount } from 'enzyme';
 describe('CardContainer', () => {
   let wrapper;
   const mockDistricts = [{cow: 'moo'}]
+  const mockCompare = [{otherCow: 'mooooo'}]
 
   it('should match the snapshot', () => {
-    wrapper = shallow(<CardContainer districts={mockDistricts} />);
+    wrapper = shallow(<CardContainer districts={mockDistricts}
+                                     compare={mockCompare} />);
     expect(wrapper).toMatchSnapshot();
   })
 })
