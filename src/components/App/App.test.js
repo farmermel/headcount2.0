@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow, mount } from 'enzyme';
-import DistrictRepository from '../../helper';
+import DistrictRepository, { mockDistrictRepository } from '../../helper';
 
 jest.mock('../../helper');
 
