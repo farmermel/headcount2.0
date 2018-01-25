@@ -5,6 +5,13 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
+    compare={
+        Array [
+            Object {
+              "otherCow": "mooooo",
+            },
+          ]
+    }
     districts={
         Array [
             Object {
@@ -27,6 +34,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
+          compare={
+                    Array [
+                              Object {
+                                "otherCow": "mooooo",
+                              },
+                            ]
+          }
           cow="moo"
 />,
       ],
@@ -39,6 +53,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "compare": Array [
+            Object {
+              "otherCow": "mooooo",
+            },
+          ],
           "cow": "moo",
         },
         "ref": null,
@@ -56,6 +75,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
+            compare={
+                        Array [
+                                    Object {
+                                      "otherCow": "mooooo",
+                                    },
+                                  ]
+            }
             cow="moo"
 />,
         ],
@@ -68,6 +94,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "compare": Array [
+              Object {
+                "otherCow": "mooooo",
+              },
+            ],
             "cow": "moo",
           },
           "ref": null,
