@@ -5,8 +5,7 @@ import './CardContainer.css';
 
 const CardContainer = ({ districts, compare }) => {
   const allDistricts = districts.map(district => (
-    <Card {...district} key={district.location}
-                        compare={compare} />
+    <Card {...district} key={district.location} compare={compare} />
   ));
 
   return <div className="card-container">{allDistricts}</div>;
