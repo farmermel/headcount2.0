@@ -5,8 +5,10 @@ import { shallow, mount } from 'enzyme';
 
 describe('Card', () => {
   let wrapper;
-  const mockData = { 2014: 0.4,
-      2015: 0.8 };
+  const mockData = { 
+    2014: 0.4,
+    2015: 0.8 
+  };
 
   beforeEach( () => {
     wrapper = shallow(<Card location='Montana'
