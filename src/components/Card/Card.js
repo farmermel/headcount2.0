@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const Card = ({ location, data, compare }) => {
+const Card = ({ location, data, compare, selected }) => {
+  const highlight = selected ? 'highlight' : '';
   const dataArray = Object.keys(data).map(year => {
     const klassName = data[year] > 0.5 ? 'above' : 'below';
 
@@ -15,7 +16,7 @@ const Card = ({ location, data, compare }) => {
   });
 
   return (
-    <div className='card'
+    <div className={`card ${highlight}`}
          onClick={() => compare(location)}>
       <h3>{location}</h3>
       <ul>{dataArray}</ul>
