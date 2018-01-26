@@ -8,6 +8,10 @@ h3 {
   font-family: 'Roboto', sans-serif;
 }
 
+.highlight {
+  box-shadow: 4px 5px 10px gold;
+}
+
 .above {
   color: #4e7fe0;
 }
