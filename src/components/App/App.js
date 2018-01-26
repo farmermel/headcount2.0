@@ -30,6 +30,8 @@ class App extends Component {
   };
 
   handleClick = district => {
+    //if a card has been clicked before AND there are two cards
+    //in compare, the card doesn't go into compare
     const toCompare = this.state.districtRepository.findByName(district);
     toCompare.selected = !toCompare.selected;
     let compare = this.state.districts.filter(district => district.selected);
@@ -41,19 +43,19 @@ class App extends Component {
   removefirstCard = compareArray => {
     let firstCard = compareArray.shift();
     firstCard.selected = false;
-    const districts = this.state.districts.map(district => {
-      return district.location === firstCard.location
-        ? (district = firstCard)
-        : district;
-    });
-    this.setState({ compare: compareArray, districts });
+    // const districts = this.state.districts.map(district => {
+    //   return district.location === firstCard.location
+    //     ? (district = firstCard)
+    //     : district;
+    // });
+    this.setState({ compare: compareArray });
   };
 
   render() {
     return (
       <div>
         <Header searchDistricts={this.searchDistricts} />
-        <ComparisonContainer />
+        <ComparisonContainer cards={this.state.compare} compare={this.handleClick} />
         <CardContainer
           districts={this.state.districts}
           compare={this.handleClick}
