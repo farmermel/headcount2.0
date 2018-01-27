@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './CardContainer.css';
 
 const CardContainer = ({ districts, compare, comparison }) => {
+  console.log(comparison)
   const allDistricts = districts.map(district => {
     return <Card {...district} key={district.location} compare={compare} />;
   });
@@ -12,7 +13,13 @@ const CardContainer = ({ districts, compare, comparison }) => {
 };
 
 CardContainer.propTypes = {
-  districts: PropTypes.arrayOf(PropTypes.object)
+  districts: PropTypes.arrayOf(PropTypes.object),
+  compare: PropTypes.func,
+  comparison: PropTypes.objectOf(PropTypes.shape({
+    avg: PropTypes.number,
+    data: PropTypes.objectOf(PropTypes.number),
+    location: PropTypes.string
+  }))
 };
 
 export default CardContainer;
