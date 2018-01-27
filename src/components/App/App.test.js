@@ -15,9 +15,9 @@ describe('App', () => {
     defaultState = {
       districts: [],
       districtRepository: new mockDistrictRepository(),
-      compare: {}
+      comparison: {},
+      comparativeAnalysis: {}
     };
-    // DistrictRepository.mockClear();
   });
 
   it('should match snapshot', () => {
