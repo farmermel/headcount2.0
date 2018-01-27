@@ -46,34 +46,25 @@ class App extends Component {
     let keys = Object.keys(comparison);
 
     keys.length > 2 && delete comparison[keys[1]];
-    comparison = this.findAverage(comparison, keys);
     keys.length === 2 && this.comparativeAnalysis();
     this.setState({ comparison });
   }
 
   handleClick = district => {
     district = this.state.districtRepository.findByName(district);
+    district.avg = this.findAverage(district.location);
     this.toggleCompare(district);
   };
 
   comparativeAnalysis = () => {
-    // if (Object.keys(this.state.comparison).length > 1) {
-      const districtKeys = Object.keys(this.state.comparison)   
-      const avg = this.state.districtRepository.compareDistrictAverages(districtKeys[0], districtKeys[1])
-      this.setState({comparativeAnalysis: avg})    
-    // }
+    const districtKeys = Object.keys(this.state.comparison);  
+    const avg = this.state.districtRepository.compareDistrictAverages(districtKeys[0], districtKeys[1])
+    this.setState({comparativeAnalysis: avg});
   }
 
-  findAverage(comparison, keys) {
-    console.log('app keys:', keys)
-    if ( keys.length > 1) {
-      const avg2 = this.state.districtRepository.findAverage(keys[1])
-      comparison[keys[1]].avg = avg2
-    }
-
-    const avg1 = this.state.districtRepository.findAverage(keys[0])
-    comparison[keys[0]].avg = avg1 
-    return comparison
+  findAverage(district) {
+    let avg = this.state.districtRepository.findAverage(district);
+    return avg;
   }
 
   render() {
