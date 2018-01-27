@@ -22,11 +22,13 @@ ShallowWrapper {
           searchDistricts={[Function]}
 />,
         <ComparisonContainer
-          cards={Object {}}
+          comparativeAnalysis={Object {}}
           compare={[Function]}
+          districts={Object {}}
 />,
         <CardContainer
           compare={[Function]}
+          comparison={Object {}}
           districts={
                     Array [
                               Object {
@@ -66,8 +68,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "cards": Object {},
+          "comparativeAnalysis": Object {},
           "compare": [Function],
+          "districts": Object {},
         },
         "ref": null,
         "rendered": null,
@@ -79,6 +82,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "compare": [Function],
+          "comparison": Object {},
           "districts": Array [
             Object {
               "data": Object {
@@ -114,11 +118,13 @@ ShallowWrapper {
             searchDistricts={[Function]}
 />,
           <ComparisonContainer
-            cards={Object {}}
+            comparativeAnalysis={Object {}}
             compare={[Function]}
+            districts={Object {}}
 />,
           <CardContainer
             compare={[Function]}
+            comparison={Object {}}
             districts={
                         Array [
                                     Object {
@@ -158,8 +164,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "cards": Object {},
+            "comparativeAnalysis": Object {},
             "compare": [Function],
+            "districts": Object {},
           },
           "ref": null,
           "rendered": null,
@@ -171,6 +178,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "compare": [Function],
+            "comparison": Object {},
             "districts": Array [
               Object {
                 "data": Object {
