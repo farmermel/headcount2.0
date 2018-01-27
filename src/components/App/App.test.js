@@ -15,7 +15,7 @@ describe('App', () => {
     defaultState = {
       districts: [],
       districtRepository: new mockDistrictRepository(),
-      compare: []
+      compare: {}
     };
     // DistrictRepository.mockClear();
   });

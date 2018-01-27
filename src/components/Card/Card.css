@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: #30392d 1px solid;
+  border: #ced8cb 3px solid;
   border-radius: 6px;
   margin: 20px 10px;
   background-color: #fff;
@@ -27,7 +27,7 @@ li {
 
 .highlight {
   box-shadow: 4px 5px 10px #586852;
-  border: #30392d 2px solid;
+  border: #ced8cb 3px solid;
 
 }
 
