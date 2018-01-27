@@ -111,7 +111,9 @@ describe('App', () => {
 
   describe('comparativeAnalysis', () => {
     it('should call compareDistrictAverages with two district names as arguments', () => {
+      expect(wrapper.state().districtRepository.compareDistrictAverages).not.toHaveBeenCalled();
 
+      wrapper.instance().comparativeAnalysis(comparison)
     })
 
     it('should set state with comparison and comparativeAnalysis', () => {

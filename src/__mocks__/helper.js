@@ -18,16 +18,6 @@ const districtsArray = [
   }
 ]
 
-// function __findAllMatches(input) {
-//   if (!input) {
-//     return districtsArray;
-//   }
-
-//   return districtsArray.filter(district => {
-//     return district.location.includes(input.toUpperCase());
-//   });
-// }
-
 const __findAllMatches = jest.fn().mockImplementation((input) => {
   if (!input) {
     return districtsArray;
@@ -42,9 +32,30 @@ const __findByName = jest.fn().mockImplementation((input) => {
   return districtsArray[input.toUpperCase()];
 })
 
+const __findAverage = jest.fn().mockImplementation((input) => {
+  return 0.6;
+})
+
+const __findRatio = jest.fn().mockImplementation((district1, district2) => {
+  return 0.6;
+})
+
+const __compareDistrictAverages = jest.fn().mockImplementation((district1, district2) => {
+    const avg = {
+      [district1.toUpperCase()]: 0.6,
+      [district2.toUpperCase()]: 1,
+      compared: 0.6
+    };
+
+    return avg;
+})
+
 const mock = jest.fn().mockImplementation(() => {
   return { findAllMatches: __findAllMatches,
            findByName: __findByName,
+           findAverage: __findAverage,
+           findRatio: __findRatio,
+           compareDistrictAverages: __compareDistrictAverages,
            data: districtsArray };
 });
 
