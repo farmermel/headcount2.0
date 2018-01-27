@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import ComparisonCard from '../ComparisonCard/ComparisonCard';
 import './ComparisonContainer.css';
 
-const ComparisonContainer = ({ districts, compare }) => {
+const ComparisonContainer = ({ districts, compare, comparativeAnalysis }) => {
   const selectedDistricts = Object.keys(districts).map(district => {
     return (
       <Card
@@ -17,7 +17,7 @@ const ComparisonContainer = ({ districts, compare }) => {
   return (
     <div className="card-container" id="compare-container">
       {selectedDistricts[0]}
-      <ComparisonCard />
+      <ComparisonCard comparativeAnalysis={comparativeAnalysis} districts={districts} />
       {selectedDistricts[1]}
     </div>
   );
