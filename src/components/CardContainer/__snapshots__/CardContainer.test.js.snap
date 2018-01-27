@@ -5,12 +5,13 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
-    compare={
-        Array [
-            Object {
+    compare={[Function]}
+    comparison={
+        Object {
+            "cow": Object {
               "otherCow": "mooooo",
             },
-          ]
+          }
     }
     districts={
         Array [
@@ -34,13 +35,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
-          compare={
-                    Array [
-                              Object {
-                                "otherCow": "mooooo",
-                              },
-                            ]
-          }
+          compare={[Function]}
           cow="moo"
 />,
       ],
@@ -53,11 +48,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "compare": Array [
-            Object {
-              "otherCow": "mooooo",
-            },
-          ],
+          "compare": [Function],
           "cow": "moo",
         },
         "ref": null,
@@ -75,13 +66,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
-            compare={
-                        Array [
-                                    Object {
-                                      "otherCow": "mooooo",
-                                    },
-                                  ]
-            }
+            compare={[Function]}
             cow="moo"
 />,
         ],
@@ -94,11 +79,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "compare": Array [
-              Object {
-                "otherCow": "mooooo",
-              },
-            ],
+            "compare": [Function],
             "cow": "moo",
           },
           "ref": null,

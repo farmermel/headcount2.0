@@ -15,9 +15,9 @@ describe('App', () => {
     defaultState = {
       districts: [],
       districtRepository: new mockDistrictRepository(),
-      compare: {}
+      comparison: {},
+      comparativeAnalysis: {}
     };
-    // DistrictRepository.mockClear();
   });
 
   it('should match snapshot', () => {
@@ -59,6 +59,63 @@ describe('App', () => {
       expect(wrapper.state().districts.length).toEqual(1);
       expect(wrapper.state().districts[0].location).toEqual('COLORADO');
     })
-    
+  })
+
+  describe('handleClick', () => {
+    it('should call findByName with argument of district on districtRepository', () => {
+
+    })
+
+    it('should call findAverage with district location as argument', () => {
+
+    })
+
+    it('should call toggleCompare with district as argument', () => {
+
+    })
+  })
+
+  describe('findAverage', () => {
+    it('should call findAverage on districtRepository', () => {
+
+    })
+
+    it('should return the average of a district\'s data', () => {
+
+    })
+  })
+
+  describe('toggleCompare', () => {
+    it('should call removeDuplicates', () => {
+
+    })
+
+    it('should limit comparison object to containing two district objects', () => {
+
+    })
+
+    it('should set state if comparison object contains one district', () => {
+
+    })
+
+    it('should call comparativeAnalysis with comparison object as argument if comparison object contains two districts', () => {
+
+    })
+  })
+
+  describe('removeDuplicates', () => {
+    it('should remove duplicate keys from comparison object', () => {
+
+    })
+  })
+
+  describe('comparativeAnalysis', () => {
+    it('should call compareDistrictAverages with two district names as arguments', () => {
+
+    })
+
+    it('should set state with comparison and comparativeAnalysis', () => {
+
+    })
   })
 });
