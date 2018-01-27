@@ -56,7 +56,6 @@ class App extends Component {
   };
 
   comparativeAnalysis = (comparison) => {
-    console.log(comparison)
     const districtKeys = Object.keys(comparison);   
     const avg = this.state.districtRepository.compareDistrictAverages(districtKeys[0], districtKeys[1])
 

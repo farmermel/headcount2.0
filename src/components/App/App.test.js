@@ -9,6 +9,32 @@ jest.mock('../../helper');
 describe('App', () => {
   let wrapper;
   let defaultState;
+  let mockComparison = {
+    COLORADO: {
+      avg: 0.6,
+      data: {
+        2004: 0.5,
+        2005: 0.9
+      },
+      location: 'COLORADO'
+    },
+    'ASPEN 20': {
+      avg: 0.6,
+      data: {
+        2004: 0.5,
+        2005: 0.9
+      },
+      location: 'ASPEN 20'
+    }
+  }
+
+  let mockDistrict = {
+    "avg": 0.6, 
+    "data": {
+      "2003": 0.4, 
+      "2004": 0.8}, 
+    location: "COLORADO"
+  }
 
   beforeEach(() => {
     wrapper = shallow(<App />);
@@ -63,30 +89,38 @@ describe('App', () => {
 
   describe('handleClick', () => {
     it('should call findByName with argument of district on districtRepository', () => {
-
+      wrapper.instance().handleClick('COLORADO');
+      expect(wrapper.state().districtRepository.findByName).toHaveBeenCalledWith('COLORADO')
     })
 
     it('should call findAverage with district location as argument', () => {
-
+      wrapper.instance().handleClick('COLORADO');
+      expect(wrapper.state().districtRepository.findAverage).toHaveBeenCalledWith('COLORADO');
     })
 
     it('should call toggleCompare with district as argument', () => {
-
+      wrapper.instance().toggleCompare = jest.fn();
+      wrapper.instance().handleClick('COLORADO');
+      expect(wrapper.instance().toggleCompare).toHaveBeenCalledWith(mockDistrict);
     })
   })
 
   describe('findAverage', () => {
     it('should call findAverage on districtRepository', () => {
-
+      wrapper.instance().findAverage(mockDistrict);
+      expect(wrapper.state().districtRepository.findAverage).toHaveBeenCalledWith(mockDistrict);
     })
 
     it('should return the average of a district\'s data', () => {
-
+      expect(wrapper.instance().findAverage(mockDistrict)).toEqual(0.6);
     })
   })
 
   describe('toggleCompare', () => {
     it('should call removeDuplicates', () => {
+      // wrapper.instance().removeDuplicates = jest.fn();
+      // wrapper.instance().toggleCompare(mockDistrict);
+      // expect(wrapper.removeDuplicates).toHaveBeenCalledWith(mockDistrict);
 
     })
 
@@ -105,15 +139,21 @@ describe('App', () => {
 
   describe('removeDuplicates', () => {
     it('should remove duplicate keys from comparison object', () => {
+      wrapper.setState({ comparison: mockComparison });
+      wrapper.instance().removeDuplicates(mockDistrict);
+
 
     })
   })
 
   describe('comparativeAnalysis', () => {
     it('should call compareDistrictAverages with two district names as arguments', () => {
+      mockDistrictRepository.mockClear();
       expect(wrapper.state().districtRepository.compareDistrictAverages).not.toHaveBeenCalled();
 
-      wrapper.instance().comparativeAnalysis(comparison)
+      wrapper.instance().comparativeAnalysis(mockComparison);
+
+      expect(wrapper.state().districtRepository.compareDistrictAverages).toHaveBeenCalled();
     })
 
     it('should set state with comparison and comparativeAnalysis', () => {
