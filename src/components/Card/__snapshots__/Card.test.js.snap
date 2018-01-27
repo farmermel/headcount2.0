@@ -30,23 +30,28 @@ ShallowWrapper {
           Montana
 </h3>,
         <ul>
-          <li
-                    className="below"
-          >
+          <li>
                     2014
                     : 
-                    0.4
+                    <span
+                              className="below"
+                    >
+                              0.4
+                    </span>
           </li>
-          <li
-                    className="above"
-          >
+          <li>
                     2015
                     : 
-                    0.8
+                    <span
+                              className="above"
+                    >
+                              0.8
+                    </span>
           </li>
 </ul>,
       ],
-      "className": "card",
+      "className": "card ",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -67,19 +72,23 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <li
-              className="below"
->
+            <li>
               2014
               : 
-              0.4
+              <span
+                            className="below"
+              >
+                            0.4
+              </span>
 </li>,
-            <li
-              className="above"
->
+            <li>
               2015
               : 
-              0.8
+              <span
+                            className="above"
+              >
+                            0.8
+              </span>
 </li>,
           ],
         },
@@ -93,15 +102,29 @@ ShallowWrapper {
               "children": Array [
                 "2014",
                 ": ",
-                0.4,
+                <span
+                  className="below"
+>
+                  0.4
+</span>,
               ],
-              "className": "below",
             },
             "ref": null,
             "rendered": Array [
               "2014",
               ": ",
-              0.4,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.4,
+                  "className": "below",
+                },
+                "ref": null,
+                "rendered": 0.4,
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -113,15 +136,29 @@ ShallowWrapper {
               "children": Array [
                 "2015",
                 ": ",
-                0.8,
+                <span
+                  className="above"
+>
+                  0.8
+</span>,
               ],
-              "className": "above",
             },
             "ref": null,
             "rendered": Array [
               "2015",
               ": ",
-              0.8,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.8,
+                  "className": "above",
+                },
+                "ref": null,
+                "rendered": 0.8,
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -142,23 +179,28 @@ ShallowWrapper {
             Montana
 </h3>,
           <ul>
-            <li
-                        className="below"
-            >
+            <li>
                         2014
                         : 
-                        0.4
+                        <span
+                                    className="below"
+                        >
+                                    0.4
+                        </span>
             </li>
-            <li
-                        className="above"
-            >
+            <li>
                         2015
                         : 
-                        0.8
+                        <span
+                                    className="above"
+                        >
+                                    0.8
+                        </span>
             </li>
 </ul>,
         ],
-        "className": "card",
+        "className": "card ",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -179,19 +221,23 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <li
-                className="below"
->
+              <li>
                 2014
                 : 
-                0.4
+                <span
+                                className="below"
+                >
+                                0.4
+                </span>
 </li>,
-              <li
-                className="above"
->
+              <li>
                 2015
                 : 
-                0.8
+                <span
+                                className="above"
+                >
+                                0.8
+                </span>
 </li>,
             ],
           },
@@ -205,15 +251,29 @@ ShallowWrapper {
                 "children": Array [
                   "2014",
                   ": ",
-                  0.4,
+                  <span
+                    className="below"
+>
+                    0.4
+</span>,
                 ],
-                "className": "below",
               },
               "ref": null,
               "rendered": Array [
                 "2014",
                 ": ",
-                0.4,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.4,
+                    "className": "below",
+                  },
+                  "ref": null,
+                  "rendered": 0.4,
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -225,15 +285,29 @@ ShallowWrapper {
                 "children": Array [
                   "2015",
                   ": ",
-                  0.8,
+                  <span
+                    className="above"
+>
+                    0.8
+</span>,
                 ],
-                "className": "above",
               },
               "ref": null,
               "rendered": Array [
                 "2015",
                 ": ",
-                0.8,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.8,
+                    "className": "above",
+                  },
+                  "ref": null,
+                  "rendered": 0.8,
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
