@@ -3,10 +3,10 @@ import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import './CardContainer.css';
 
-const CardContainer = ({ districts, compare }) => {
-  const allDistricts = districts.map(district => (
-    <Card {...district} key={district.location} compare={compare} />
-  ));
+const CardContainer = ({ districts, compare, comparison }) => {
+  const allDistricts = districts.map(district => {
+    return <Card {...district} key={district.location} compare={compare} />;
+  });
 
   return <div className="card-container">{allDistricts}</div>;
 };
