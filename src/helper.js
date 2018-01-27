@@ -18,7 +18,7 @@ export default class DistrictRepository {
         [dataPoint.TimeFrame]: this.roundToThousandth(dataPoint.Data) || 0
       };
 
-      cleanedData[location].selected = false;
+      // cleanedData[location].selected = false;
 
       return cleanedData;
     }, {});

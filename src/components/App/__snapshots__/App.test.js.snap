@@ -21,10 +21,30 @@ ShallowWrapper {
         <Header
           searchDistricts={[Function]}
 />,
-        <ComparisonContainer />,
+        <ComparisonContainer
+          cards={Array []}
+          compare={[Function]}
+/>,
         <CardContainer
           compare={[Function]}
-          districts={undefined}
+          districts={
+                    Array [
+                              Object {
+                                "data": Object {
+                                  "2003": 0.4,
+                                  "2004": 0.8,
+                                },
+                                "location": "COLORADO",
+                              },
+                              Object {
+                                "data": Object {
+                                  "2003": 0.7,
+                                  "2004": 0.9,
+                                },
+                                "location": "ASPEN 20",
+                              },
+                            ]
+          }
 />,
       ],
     },
@@ -45,7 +65,10 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "cards": Array [],
+          "compare": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -56,7 +79,22 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "compare": [Function],
-          "districts": undefined,
+          "districts": Array [
+            Object {
+              "data": Object {
+                "2003": 0.4,
+                "2004": 0.8,
+              },
+              "location": "COLORADO",
+            },
+            Object {
+              "data": Object {
+                "2003": 0.7,
+                "2004": 0.9,
+              },
+              "location": "ASPEN 20",
+            },
+          ],
         },
         "ref": null,
         "rendered": null,
@@ -75,10 +113,30 @@ ShallowWrapper {
           <Header
             searchDistricts={[Function]}
 />,
-          <ComparisonContainer />,
+          <ComparisonContainer
+            cards={Array []}
+            compare={[Function]}
+/>,
           <CardContainer
             compare={[Function]}
-            districts={undefined}
+            districts={
+                        Array [
+                                    Object {
+                                      "data": Object {
+                                        "2003": 0.4,
+                                        "2004": 0.8,
+                                      },
+                                      "location": "COLORADO",
+                                    },
+                                    Object {
+                                      "data": Object {
+                                        "2003": 0.7,
+                                        "2004": 0.9,
+                                      },
+                                      "location": "ASPEN 20",
+                                    },
+                                  ]
+            }
 />,
         ],
       },
@@ -99,7 +157,10 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "cards": Array [],
+            "compare": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -110,7 +171,22 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "compare": [Function],
-            "districts": undefined,
+            "districts": Array [
+              Object {
+                "data": Object {
+                  "2003": 0.4,
+                  "2004": 0.8,
+                },
+                "location": "COLORADO",
+              },
+              Object {
+                "data": Object {
+                  "2003": 0.7,
+                  "2004": 0.9,
+                },
+                "location": "ASPEN 20",
+              },
+            ],
           },
           "ref": null,
           "rendered": null,

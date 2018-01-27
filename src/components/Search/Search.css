@@ -1,0 +1,10 @@
+.search-wrap {
+  width: 56%;
+}
+
+.search {
+  padding: 2px 0 2px 10px;
+  height: 26px;
+  font-size: 1em;
+  width: 100%;
+}

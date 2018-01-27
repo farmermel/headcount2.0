@@ -2,25 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow, mount } from 'enzyme';
-import DistrictRepository from '../../helper';
+import DistrictRepository, { mockDistrictRepository } from '../../helper';
 
 jest.mock('../../helper');
 
 describe('App', () => {
   let wrapper;
   let defaultState;
-  // const allDistricts = {
-  //   findAllMatches: jest.fn()
-  // }
 
   beforeEach(() => {
     wrapper = shallow(<App />);
     defaultState = {
       districts: [],
-      allDistricts: new DistrictRepository(),
-      compare: []
+      districtRepository: new mockDistrictRepository(),
+      compare: {}
     };
-    DistrictRepository.mockClear();
+    // DistrictRepository.mockClear();
   });
 
   it('should match snapshot', () => {
@@ -39,27 +36,29 @@ describe('App', () => {
     const wrapper = mount(<App />);
 
     expect(typeof wrapper.state().districts).toEqual('object');
-    expect(wrapper.state().districts.length).toEqual(181);
+    expect(wrapper.state().districts.length).toEqual(2);
   });
 
-  //put describe block here for search
-  it('should make a call to DistrictRepository findByName method', () => {
-    expect(wrapper.state().allDistricts.findAllMatches).toHaveBeenCalled();
+  describe('searchDistricts', () => {
 
-    wrapper.instance().searchDistricts('COLORADO');
+    it('should make a call to DistrictRepository findByName method', () => {
+      expect(wrapper.state().districtRepository.findAllMatches).toHaveBeenCalled();
 
-    expect(wrapper.state().allDistricts.findAllMatches).toHaveBeenCalledWith('COLORADO');
+      wrapper.instance().searchDistricts('COLORADO');
 
-    // expect(wrapper.instance().findByName).toHaveBeenCalledWith('COLORADO');
-    // expect(wrapper.state().districts[0]).toEqual(defaultState)
+      expect(wrapper.state().districtRepository.findAllMatches).toHaveBeenCalledWith('COLORADO');
+    })
 
-  })
+    it('should update state with districts found in search', () => {
+      expect(wrapper.state().districts.length).toEqual(2);
+      expect(wrapper.state().districts[0].location).toEqual('COLORADO');
+      expect(wrapper.state().districts[1].location).toEqual('ASPEN 20');
 
-  it('should update state with districts found in search', () => {
-    //find length of state.districts
-    //show that contains more than colorado
-    //call search
-    //show that state is now only x long
-    //and only contains colorado
+      wrapper.instance().searchDistricts('COLORADO');
+
+      expect(wrapper.state().districts.length).toEqual(1);
+      expect(wrapper.state().districts[0].location).toEqual('COLORADO');
+    })
+    
   })
 });
