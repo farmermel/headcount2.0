@@ -22,7 +22,7 @@ ShallowWrapper {
           searchDistricts={[Function]}
 />,
         <ComparisonContainer
-          cards={Array []}
+          cards={Object {}}
           compare={[Function]}
 />,
         <CardContainer
@@ -66,7 +66,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "cards": Array [],
+          "cards": Object {},
           "compare": [Function],
         },
         "ref": null,
@@ -114,7 +114,7 @@ ShallowWrapper {
             searchDistricts={[Function]}
 />,
           <ComparisonContainer
-            cards={Array []}
+            cards={Object {}}
             compare={[Function]}
 />,
           <CardContainer
@@ -158,7 +158,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "cards": Array [],
+            "cards": Object {},
             "compare": [Function],
           },
           "ref": null,
