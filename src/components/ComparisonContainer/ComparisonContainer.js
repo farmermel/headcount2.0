@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 import ComparisonCard from '../ComparisonCard/ComparisonCard';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import './ComparisonContainer.css';
 
 const ComparisonContainer = ({ districts, compare, comparativeAnalysis }) => {
@@ -15,19 +15,23 @@ const ComparisonContainer = ({ districts, compare, comparativeAnalysis }) => {
       />
     );
   });
+
   return (
     <div className="card-container" id="compare-container">
       {selectedDistricts[0]}
-      <ComparisonCard comparativeAnalysis={comparativeAnalysis} districts={districts} />
+      <ComparisonCard
+        comparativeAnalysis={comparativeAnalysis}
+        districts={districts}
+      />
       {selectedDistricts[1]}
     </div>
   );
 };
 
-ComparisonCard.prototypes = {
-  districts: PropTypes.objectOf(PropTypes.object),
-  compare: PropTypes.func, 
-  comparativeAnalysis: PropTypes.object
-}
+ComparisonContainer.propTypes = {
+  districts: PropTypes.object,
+  compare: PropTypes.func,
+  comparativeAnalysis: PropTypes.objectOf(PropTypes.number)
+};
 
 export default ComparisonContainer;
