@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './ComparisonCard.css';
 
 const ComparisonCard = ({ districts, comparativeAnalysis}) => {    
   const district1key = Object.keys(districts)[0];
@@ -9,7 +10,7 @@ const ComparisonCard = ({ districts, comparativeAnalysis}) => {
   const analysis = comparativeAnalysis.compared ? comparativeAnalysis.compared : ''
   
   return (
-    <div className="card">
+    <div className="card comparison-card">
       <h3>{district1key} {district1}</h3>
       <h3>{analysis}</h3>
       <h3>{district2key} {district2}</h3>

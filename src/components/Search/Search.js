@@ -7,7 +7,7 @@ const Search = ({searchDistricts}) => {
       <input type="text"
              placeholder="Search Districts"
              className="search"
-             onChange={(e) => searchDistricts(e.target.value)}/>
+             onChange={(e) => searchDistricts(e.target.value)} />
     </div>
   );
 };
