@@ -60,7 +60,7 @@ ShallowWrapper {
           : 0.6
 </h3>,
       ],
-      "className": "card",
+      "className": "card comparison-card",
     },
     "ref": null,
     "rendered": Array [
@@ -137,7 +137,7 @@ ShallowWrapper {
             : 0.6
 </h3>,
         ],
-        "className": "card",
+        "className": "card comparison-card",
       },
       "ref": null,
       "rendered": Array [
