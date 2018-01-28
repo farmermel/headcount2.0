@@ -17,6 +17,12 @@ ShallowWrapper {
         Array [
             Object {
               "cow": "moo",
+              "location": "farm",
+              "selected": false,
+            },
+            Object {
+              "location": "mud",
+              "pig": "oink",
               "selected": false,
             },
           ]
@@ -38,6 +44,13 @@ ShallowWrapper {
         <Card
           compare={[Function]}
           cow="moo"
+          location="farm"
+          selected={false}
+/>,
+        <Card
+          compare={[Function]}
+          location="mud"
+          pig="oink"
           selected={false}
 />,
       ],
@@ -47,11 +60,26 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "farm",
         "nodeType": "function",
         "props": Object {
           "compare": [Function],
           "cow": "moo",
+          "location": "farm",
+          "selected": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "mud",
+        "nodeType": "function",
+        "props": Object {
+          "compare": [Function],
+          "location": "mud",
+          "pig": "oink",
           "selected": false,
         },
         "ref": null,
@@ -71,6 +99,13 @@ ShallowWrapper {
           <Card
             compare={[Function]}
             cow="moo"
+            location="farm"
+            selected={false}
+/>,
+          <Card
+            compare={[Function]}
+            location="mud"
+            pig="oink"
             selected={false}
 />,
         ],
@@ -80,11 +115,26 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "farm",
           "nodeType": "function",
           "props": Object {
             "compare": [Function],
             "cow": "moo",
+            "location": "farm",
+            "selected": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "mud",
+          "nodeType": "function",
+          "props": Object {
+            "compare": [Function],
+            "location": "mud",
+            "pig": "oink",
             "selected": false,
           },
           "ref": null,

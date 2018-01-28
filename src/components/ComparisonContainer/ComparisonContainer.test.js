@@ -7,7 +7,7 @@ describe('ComparisonContainer', () => {
   let wrapper;
   let compare = jest.fn();
   const mockDistricts = { object1: { cow: 'moo' }, object2: { duck: 'quack' } };
-  const mockCompAnalysis = { cow: 9, duck: 1 }
+  const mockCompAnalysis = { cow: 9, duck: 1 };
   it('should match the snapshot', () => {
     wrapper = shallow(
       <ComparisonContainer
