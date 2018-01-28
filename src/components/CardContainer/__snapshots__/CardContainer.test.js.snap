@@ -9,7 +9,7 @@ ShallowWrapper {
     comparison={
         Object {
             "cow": Object {
-              "otherCow": "mooooo",
+              "otherCow": 7,
             },
           }
     }
@@ -17,6 +17,7 @@ ShallowWrapper {
         Array [
             Object {
               "cow": "moo",
+              "selected": false,
             },
           ]
     }
@@ -37,6 +38,7 @@ ShallowWrapper {
         <Card
           compare={[Function]}
           cow="moo"
+          selected={false}
 />,
       ],
       "className": "card-container",
@@ -50,6 +52,7 @@ ShallowWrapper {
         "props": Object {
           "compare": [Function],
           "cow": "moo",
+          "selected": false,
         },
         "ref": null,
         "rendered": null,
@@ -68,6 +71,7 @@ ShallowWrapper {
           <Card
             compare={[Function]}
             cow="moo"
+            selected={false}
 />,
         ],
         "className": "card-container",
@@ -81,6 +85,7 @@ ShallowWrapper {
           "props": Object {
             "compare": [Function],
             "cow": "moo",
+            "selected": false,
           },
           "ref": null,
           "rendered": null,

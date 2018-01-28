@@ -5,13 +5,14 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
+    compare={[Function]}
     data={
         Object {
             "2014": 0.4,
             "2015": 0.8,
           }
     }
-    location="Montana"
+    location="COLORADO"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -27,7 +28,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h3>
-          Montana
+          COLORADO
 </h3>,
         <ul>
           <li>
@@ -50,7 +51,7 @@ ShallowWrapper {
           </li>
 </ul>,
       ],
-      "className": "card ",
+      "className": "card undefined",
       "onClick": [Function],
     },
     "ref": null,
@@ -60,10 +61,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Montana",
+          "children": "COLORADO",
         },
         "ref": null,
-        "rendered": "Montana",
+        "rendered": "COLORADO",
         "type": "h3",
       },
       Object {
@@ -176,7 +177,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h3>
-            Montana
+            COLORADO
 </h3>,
           <ul>
             <li>
@@ -199,7 +200,7 @@ ShallowWrapper {
             </li>
 </ul>,
         ],
-        "className": "card ",
+        "className": "card undefined",
         "onClick": [Function],
       },
       "ref": null,
@@ -209,10 +210,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Montana",
+            "children": "COLORADO",
           },
           "ref": null,
-          "rendered": "Montana",
+          "rendered": "COLORADO",
           "type": "h3",
         },
         Object {

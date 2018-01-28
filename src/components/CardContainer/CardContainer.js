@@ -6,7 +6,7 @@ import './CardContainer.css';
 const CardContainer = ({ districts, compare, comparison }) => {
   const allDistricts = districts.map(district => {
     comparison[district.location] 
-      ? district.selected=true 
+      ? district.selected = true 
       : district.selected = false;
     return <Card {...district} key={district.location} compare={compare} />;
   });
