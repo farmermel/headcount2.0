@@ -1,3 +1,8 @@
 .comparison-card {
   justify-content: space-evenly;
+  text-align: center;
+}
+
+.ratio {
+  font-size: 2em;
 }
