@@ -7,19 +7,22 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <ComparisonContainer
     comparativeAnalysis={
         Object {
-            "cow": Object {
-              "otherCow": "mooooo",
-            },
+            "cow": 9,
+            "duck": 1,
           }
     }
     compare={[Function]}
     districts={
-        Array [
-            Object {
+        Object {
+            "object1": Object {
               "cow": "moo",
               "selected": true,
             },
-          ]
+            "object2": Object {
+              "duck": "quack",
+              "selected": true,
+            },
+          }
     }
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -43,21 +46,28 @@ ShallowWrapper {
         <ComparisonCard
           comparativeAnalysis={
                     Object {
-                              "cow": Object {
-                                "otherCow": "mooooo",
-                              },
+                              "cow": 9,
+                              "duck": 1,
                             }
           }
           districts={
-                    Array [
-                              Object {
+                    Object {
+                              "object1": Object {
                                 "cow": "moo",
                                 "selected": true,
                               },
-                            ]
+                              "object2": Object {
+                                "duck": "quack",
+                                "selected": true,
+                              },
+                            }
           }
 />,
-        undefined,
+        <Card
+          compare={[Function]}
+          duck="quack"
+          selected={true}
+/>,
       ],
       "className": "card-container",
       "id": "compare-container",
@@ -83,22 +93,37 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "comparativeAnalysis": Object {
-            "cow": Object {
-              "otherCow": "mooooo",
-            },
+            "cow": 9,
+            "duck": 1,
           },
-          "districts": Array [
-            Object {
+          "districts": Object {
+            "object1": Object {
               "cow": "moo",
               "selected": true,
             },
-          ],
+            "object2": Object {
+              "duck": "quack",
+              "selected": true,
+            },
+          },
         },
         "ref": null,
         "rendered": null,
         "type": [Function],
       },
-      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "compare": [Function],
+          "duck": "quack",
+          "selected": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -117,21 +142,28 @@ ShallowWrapper {
           <ComparisonCard
             comparativeAnalysis={
                         Object {
-                                    "cow": Object {
-                                      "otherCow": "mooooo",
-                                    },
+                                    "cow": 9,
+                                    "duck": 1,
                                   }
             }
             districts={
-                        Array [
-                                    Object {
+                        Object {
+                                    "object1": Object {
                                       "cow": "moo",
                                       "selected": true,
                                     },
-                                  ]
+                                    "object2": Object {
+                                      "duck": "quack",
+                                      "selected": true,
+                                    },
+                                  }
             }
 />,
-          undefined,
+          <Card
+            compare={[Function]}
+            duck="quack"
+            selected={true}
+/>,
         ],
         "className": "card-container",
         "id": "compare-container",
@@ -157,22 +189,37 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "comparativeAnalysis": Object {
-              "cow": Object {
-                "otherCow": "mooooo",
-              },
+              "cow": 9,
+              "duck": 1,
             },
-            "districts": Array [
-              Object {
+            "districts": Object {
+              "object1": Object {
                 "cow": "moo",
                 "selected": true,
               },
-            ],
+              "object2": Object {
+                "duck": "quack",
+                "selected": true,
+              },
+            },
           },
           "ref": null,
           "rendered": null,
           "type": [Function],
         },
-        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "compare": [Function],
+            "duck": "quack",
+            "selected": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
       ],
       "type": "div",
     },
