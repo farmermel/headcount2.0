@@ -46,7 +46,7 @@ class App extends Component {
     let keys = Object.keys(comparison);
 
     keys.length > 2 && delete comparison[keys[1]];
-    keys.length > 1 ? this.comparativeAnalysis(comparison) : this.setState({ comparison });
+    keys.length > 1 ? this.comparativeAnalysis(comparison) : this.setState({ comparison, comparativeAnalysis: {} });
   }
 
   handleClick = district => {
