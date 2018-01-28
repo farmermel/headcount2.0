@@ -116,39 +116,8 @@ describe('App', () => {
     })
   })
 
-  describe('toggleCompare', () => {
-    it('should call removeDuplicates', () => {
-      // wrapper.instance().removeDuplicates = jest.fn();
-      // wrapper.instance().toggleCompare(mockDistrict);
-      // expect(wrapper.removeDuplicates).toHaveBeenCalledWith(mockDistrict);
-
-    })
-
-    it('should limit comparison object to containing two district objects', () => {
-
-    })
-
-    it('should set state if comparison object contains one district', () => {
-
-    })
-
-    it('should call comparativeAnalysis with comparison object as argument if comparison object contains two districts', () => {
-
-    })
-  })
-
-  describe('removeDuplicates', () => {
-    it('should remove duplicate keys from comparison object', () => {
-      wrapper.setState({ comparison: mockComparison });
-      wrapper.instance().removeDuplicates(mockDistrict);
-
-
-    })
-  })
-
   describe('comparativeAnalysis', () => {
     it('should call compareDistrictAverages with two district names as arguments', () => {
-      mockDistrictRepository.mockClear();
       expect(wrapper.state().districtRepository.compareDistrictAverages).not.toHaveBeenCalled();
 
       wrapper.instance().comparativeAnalysis(mockComparison);
@@ -157,7 +126,49 @@ describe('App', () => {
     })
 
     it('should set state with comparison and comparativeAnalysis', () => {
+      wrapper.instance().setState = jest.fn();
+      wrapper.instance().comparativeAnalysis(mockComparison);
 
+      expect(wrapper.instance().setState).toHaveBeenCalled()
+    })
+  })
+
+  describe('toggleCompare', () => {
+    it('should call removeDuplicates', () => {
+      wrapper.instance().removeDuplicates = jest.fn().mockImplementation( () => {
+        return mockComparison;
+      });
+      wrapper.instance().toggleCompare(mockDistrict);
+      expect(wrapper.instance().removeDuplicates).toHaveBeenCalledWith(mockDistrict);
+    })
+
+    it('should limit comparison object to containing two district objects', () => {
+      expect(Object.keys(wrapper.state().comparison).length).toEqual(0);
+      wrapper.instance().handleClick('COLORADO');
+      wrapper.instance().handleClick('ASPEN 20');
+      expect(Object.keys(wrapper.state().comparison).length).toEqual(2);
+    })
+
+    it('should set state if comparison object contains one district', () => {
+      expect(Object.keys(wrapper.state().comparison).length).toEqual(0);
+      wrapper.instance().handleClick('COLORADO');
+      expect(Object.keys(wrapper.state().comparison).length).toEqual(1);
+    })
+
+    it('should call comparativeAnalysis with comparison object as argument if comparison object contains two districts', () => {
+      wrapper.instance().setState = jest.fn();
+
+      wrapper.instance().handleClick('COLORADO');
+      wrapper.instance().handleClick('ASPEN 20');
+
+      expect(wrapper.instance().setState).toHaveBeenCalled()
+    })
+  })
+
+  describe('removeDuplicates', () => {
+    it('should remove duplicate keys from comparison object', () => {
+      wrapper.setState({ comparison: mockComparison });
+      wrapper.instance().removeDuplicates(mockDistrict);
     })
   })
 });
