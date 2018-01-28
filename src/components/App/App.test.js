@@ -40,7 +40,7 @@ describe('App', () => {
     wrapper = shallow(<App />);
     defaultState = {
       districts: [],
-      districtRepository: new mockDistrictRepository(),
+      districtRepository: new mockDistrictRepository(mockDistrict),
       comparison: {},
       comparativeAnalysis: {}
     };
@@ -85,6 +85,20 @@ describe('App', () => {
       expect(wrapper.state().districts.length).toEqual(1);
       expect(wrapper.state().districts[0].location).toEqual('COLORADO');
     })
+
+    it('should update state districts on change in input', () => {
+      wrapper = mount(<App />)
+      let event = { target: { value: 'COL' } };
+
+      expect(wrapper.state().districts.length).toEqual(2);
+      expect(wrapper.state().districts[0].location).toEqual('COLORADO');
+      expect(wrapper.state().districts[1].location).toEqual('ASPEN 20');
+
+      wrapper.find('input').simulate('change', event);
+
+      expect(wrapper.state().districts.length).toEqual(1);
+      expect(wrapper.state().districts[0].location).toEqual('COLORADO');
+    })
   })
 
   describe('handleClick', () => {
@@ -103,6 +117,15 @@ describe('App', () => {
       wrapper.instance().handleClick('COLORADO');
       expect(wrapper.instance().toggleCompare).toHaveBeenCalledWith(mockDistrict);
     })
+
+    // it('should be called on click with an event target as argument', () => {
+    //   wrapper = mount(<App />)
+    //   let event = { target: { value: mockDistrict } };
+    //   wrapper.instance().handleClick = jest.fn();
+    //   console.log(wrapper.find('.card').first())
+    //   wrapper.find('.card').first().simulate('click', event);
+    //   expect(wrapper.instance().handleClick).toHaveBeenCalledWith(mockDistrict.location)
+    // })
   })
 
   describe('findAverage', () => {
