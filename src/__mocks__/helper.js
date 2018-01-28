@@ -59,8 +59,6 @@ const __findRatio = jest.fn().mockImplementation((district1, district2) => {
 
 const __compareDistrictAverages = jest.fn().mockImplementation((district1, district2) => {
   const avg = {
-    // [district1.toUpperCase()]: 0.6,
-    // [district2.toUpperCase()]: 1,
     district1: 0.6,
     district2: 1,
     compared: 0.6
