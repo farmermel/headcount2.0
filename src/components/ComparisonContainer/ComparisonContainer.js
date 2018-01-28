@@ -5,12 +5,12 @@ import './ComparisonContainer.css';
 
 const ComparisonContainer = ({ districts, compare, comparativeAnalysis }) => {
   const selectedDistricts = Object.keys(districts).map(district => {
+    districts[district].selected = true;
     return (
       <Card
         {...districts[district]}
         key={districts[district].location}
         compare={compare}
-        selected={true}
       />
     );
   });

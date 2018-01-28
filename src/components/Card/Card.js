@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = ({ location, data, compare, selected }) => {
-  const highlight = selected ? 'highlight' : '';
   const dataArray = Object.keys(data).map(year => {
     const klassName = data[year] > 0.5 ? 'above' : 'below';
 
@@ -15,7 +14,7 @@ const Card = ({ location, data, compare, selected }) => {
   });
 
   return (
-    <div className={`card ${highlight}`}
+    <div className={`card ${selected && 'highlight'}`}
          onClick={() => compare(location)}>
       <h3>{location}</h3>
       <ul>{dataArray}</ul>
@@ -26,8 +25,7 @@ const Card = ({ location, data, compare, selected }) => {
 Card.propTypes = {
   location: PropTypes.string,
   data: PropTypes.objectOf(PropTypes.number),
-  compare: PropTypes.func,
-  selected: PropTypes.boolean
+  compare: PropTypes.func
 };
 
 export default Card;
