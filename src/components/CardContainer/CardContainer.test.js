@@ -5,14 +5,18 @@ import { shallow } from 'enzyme';
 
 describe('CardContainer', () => {
   let wrapper;
-  const mockDistricts = [{cow: 'moo'}];
-  const mockComparison = { cow: {otherCow: 7}};
+  const mockDistricts = [{ cow: 'moo' }];
+  const mockComparison = { cow: { otherCow: 7 } };
   const mockCompare = jest.fn();
 
   it('should match the snapshot', () => {
-    wrapper = shallow(<CardContainer districts={mockDistricts}
-                                     comparison={mockComparison}
-                                     compare={mockCompare} />);
+    wrapper = shallow(
+      <CardContainer
+        districts={mockDistricts}
+        comparison={mockComparison}
+        compare={mockCompare}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
-  })
-})
+  });
+});

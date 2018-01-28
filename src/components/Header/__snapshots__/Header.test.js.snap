@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header
+    searchDistricts={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="header-wrap"
+>
+          <img
+                    alt="check"
+                    className="check-icon"
+                    src="sign.svg"
+          />
+          <h1
+                    className="title"
+          >
+                    HeadCount2.0
+          </h1>
+</div>,
+        <Search
+          searchDistricts={[Function]}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="check"
+              className="check-icon"
+              src="sign.svg"
+/>,
+            <h1
+              className="title"
+>
+              HeadCount2.0
+</h1>,
+          ],
+          "className": "header-wrap",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "check",
+              "className": "check-icon",
+              "src": "sign.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "HeadCount2.0",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "HeadCount2.0",
+            "type": "h1",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "searchDistricts": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="header-wrap"
+>
+            <img
+                        alt="check"
+                        className="check-icon"
+                        src="sign.svg"
+            />
+            <h1
+                        className="title"
+            >
+                        HeadCount2.0
+            </h1>
+</div>,
+          <Search
+            searchDistricts={[Function]}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="check"
+                className="check-icon"
+                src="sign.svg"
+/>,
+              <h1
+                className="title"
+>
+                HeadCount2.0
+</h1>,
+            ],
+            "className": "header-wrap",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "check",
+                "className": "check-icon",
+                "src": "sign.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "HeadCount2.0",
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": "HeadCount2.0",
+              "type": "h1",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "searchDistricts": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "header",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
