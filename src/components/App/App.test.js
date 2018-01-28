@@ -117,15 +117,6 @@ describe('App', () => {
       wrapper.instance().handleClick('COLORADO');
       expect(wrapper.instance().toggleCompare).toHaveBeenCalledWith(mockDistrict);
     })
-
-    // it('should be called on click with an event target as argument', () => {
-    //   wrapper = mount(<App />)
-    //   let event = { target: { value: mockDistrict } };
-    //   wrapper.instance().handleClick = jest.fn();
-    //   console.log(wrapper.find('.card').first())
-    //   wrapper.find('.card').first().simulate('click', event);
-    //   expect(wrapper.instance().handleClick).toHaveBeenCalledWith(mockDistrict.location)
-    // })
   })
 
   describe('findAverage', () => {

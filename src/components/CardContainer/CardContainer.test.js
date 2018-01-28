@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CardContainer from './CardContainer';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('CardContainer', () => {
   let wrapper;
   const mockDistricts = [{cow: 'moo'}];
-  const mockComparison = { cow: {otherCow: 'mooooo'}};
+  const mockComparison = { cow: {otherCow: 7}};
   const mockCompare = jest.fn();
 
   it('should match the snapshot', () => {

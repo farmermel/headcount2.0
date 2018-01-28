@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComparisonContainer should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ComparisonContainer
+    comparativeAnalysis={
+        Object {
+            "cow": 9,
+            "duck": 1,
+          }
+    }
+    compare={[Function]}
+    districts={
+        Object {
+            "object1": Object {
+              "cow": "moo",
+              "selected": true,
+            },
+            "object2": Object {
+              "duck": "quack",
+              "selected": true,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          compare={[Function]}
+          cow="moo"
+          selected={true}
+/>,
+        <ComparisonCard
+          comparativeAnalysis={
+                    Object {
+                              "cow": 9,
+                              "duck": 1,
+                            }
+          }
+          districts={
+                    Object {
+                              "object1": Object {
+                                "cow": "moo",
+                                "selected": true,
+                              },
+                              "object2": Object {
+                                "duck": "quack",
+                                "selected": true,
+                              },
+                            }
+          }
+/>,
+        <Card
+          compare={[Function]}
+          duck="quack"
+          selected={true}
+/>,
+      ],
+      "className": "card-container",
+      "id": "compare-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "compare": [Function],
+          "cow": "moo",
+          "selected": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparativeAnalysis": Object {
+            "cow": 9,
+            "duck": 1,
+          },
+          "districts": Object {
+            "object1": Object {
+              "cow": "moo",
+              "selected": true,
+            },
+            "object2": Object {
+              "duck": "quack",
+              "selected": true,
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "compare": [Function],
+          "duck": "quack",
+          "selected": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            compare={[Function]}
+            cow="moo"
+            selected={true}
+/>,
+          <ComparisonCard
+            comparativeAnalysis={
+                        Object {
+                                    "cow": 9,
+                                    "duck": 1,
+                                  }
+            }
+            districts={
+                        Object {
+                                    "object1": Object {
+                                      "cow": "moo",
+                                      "selected": true,
+                                    },
+                                    "object2": Object {
+                                      "duck": "quack",
+                                      "selected": true,
+                                    },
+                                  }
+            }
+/>,
+          <Card
+            compare={[Function]}
+            duck="quack"
+            selected={true}
+/>,
+        ],
+        "className": "card-container",
+        "id": "compare-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "compare": [Function],
+            "cow": "moo",
+            "selected": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "comparativeAnalysis": Object {
+              "cow": 9,
+              "duck": 1,
+            },
+            "districts": Object {
+              "object1": Object {
+                "cow": "moo",
+                "selected": true,
+              },
+              "object2": Object {
+                "duck": "quack",
+                "selected": true,
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "compare": [Function],
+            "duck": "quack",
+            "selected": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
