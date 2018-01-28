@@ -46,19 +46,27 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h3>
-          COLORADO
-           
-          : 0.4
-</h3>,
-        <h3>
+        <div>
+          <h3>
+                    COLORADO
+          </h3>
+          <p>
+                    0.4
+          </p>
+</div>,
+        <h3
+          className="ratio"
+>
           0.448
 </h3>,
-        <h3>
-          ASPEN
-           
-          : 0.6
-</h3>,
+        <div>
+          <h3>
+                    ASPEN
+          </h3>
+          <p>
+                    0.6
+          </p>
+</div>,
       ],
       "className": "card comparison-card",
     },
@@ -70,18 +78,40 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "COLORADO",
-            " ",
-            ": 0.4",
+            <h3>
+              COLORADO
+</h3>,
+            <p>
+              0.4
+</p>,
           ],
         },
         "ref": null,
         "rendered": Array [
-          "COLORADO",
-          " ",
-          ": 0.4",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "COLORADO",
+            },
+            "ref": null,
+            "rendered": "COLORADO",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": 0.4,
+            },
+            "ref": null,
+            "rendered": 0.4,
+            "type": "p",
+          },
         ],
-        "type": "h3",
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -89,6 +119,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": 0.448,
+          "className": "ratio",
         },
         "ref": null,
         "rendered": 0.448,
@@ -100,18 +131,40 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "ASPEN",
-            " ",
-            ": 0.6",
+            <h3>
+              ASPEN
+</h3>,
+            <p>
+              0.6
+</p>,
           ],
         },
         "ref": null,
         "rendered": Array [
-          "ASPEN",
-          " ",
-          ": 0.6",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "ASPEN",
+            },
+            "ref": null,
+            "rendered": "ASPEN",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": 0.6,
+            },
+            "ref": null,
+            "rendered": 0.6,
+            "type": "p",
+          },
         ],
-        "type": "h3",
+        "type": "div",
       },
     ],
     "type": "div",
@@ -123,19 +176,27 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3>
-            COLORADO
-             
-            : 0.4
-</h3>,
-          <h3>
+          <div>
+            <h3>
+                        COLORADO
+            </h3>
+            <p>
+                        0.4
+            </p>
+</div>,
+          <h3
+            className="ratio"
+>
             0.448
 </h3>,
-          <h3>
-            ASPEN
-             
-            : 0.6
-</h3>,
+          <div>
+            <h3>
+                        ASPEN
+            </h3>
+            <p>
+                        0.6
+            </p>
+</div>,
         ],
         "className": "card comparison-card",
       },
@@ -147,18 +208,40 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "COLORADO",
-              " ",
-              ": 0.4",
+              <h3>
+                COLORADO
+</h3>,
+              <p>
+                0.4
+</p>,
             ],
           },
           "ref": null,
           "rendered": Array [
-            "COLORADO",
-            " ",
-            ": 0.4",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "COLORADO",
+              },
+              "ref": null,
+              "rendered": "COLORADO",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": 0.4,
+              },
+              "ref": null,
+              "rendered": 0.4,
+              "type": "p",
+            },
           ],
-          "type": "h3",
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -166,6 +249,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": 0.448,
+            "className": "ratio",
           },
           "ref": null,
           "rendered": 0.448,
@@ -177,18 +261,40 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "ASPEN",
-              " ",
-              ": 0.6",
+              <h3>
+                ASPEN
+</h3>,
+              <p>
+                0.6
+</p>,
             ],
           },
           "ref": null,
           "rendered": Array [
-            "ASPEN",
-            " ",
-            ": 0.6",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "ASPEN",
+              },
+              "ref": null,
+              "rendered": "ASPEN",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": 0.6,
+              },
+              "ref": null,
+              "rendered": 0.6,
+              "type": "p",
+            },
           ],
-          "type": "h3",
+          "type": "div",
         },
       ],
       "type": "div",
