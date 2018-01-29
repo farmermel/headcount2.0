@@ -26,15 +26,16 @@ describe('App', () => {
       },
       location: 'ASPEN 20'
     }
-  }
+  };
 
   let mockDistrict = {
-    "avg": 0.6, 
-    "data": {
-      "2003": 0.4, 
-      "2004": 0.8}, 
-    location: "COLORADO"
-  }
+    avg: 0.6,
+    data: {
+      '2003': 0.4,
+      '2004': 0.8
+    },
+    location: 'COLORADO'
+  };
 
   beforeEach(() => {
     wrapper = shallow(<App />);
@@ -66,14 +67,17 @@ describe('App', () => {
   });
 
   describe('searchDistricts', () => {
-
     it('should make a call to DistrictRepository findByName method', () => {
-      expect(wrapper.state().districtRepository.findAllMatches).toHaveBeenCalled();
+      expect(
+        wrapper.state().districtRepository.findAllMatches
+      ).toHaveBeenCalled();
 
       wrapper.instance().searchDistricts('COLORADO');
 
-      expect(wrapper.state().districtRepository.findAllMatches).toHaveBeenCalledWith('COLORADO');
-    })
+      expect(
+        wrapper.state().districtRepository.findAllMatches
+      ).toHaveBeenCalledWith('COLORADO');
+    });
 
     it('should update state with districts found in search', () => {
       expect(wrapper.state().districts.length).toEqual(2);
@@ -84,10 +88,10 @@ describe('App', () => {
 
       expect(wrapper.state().districts.length).toEqual(1);
       expect(wrapper.state().districts[0].location).toEqual('COLORADO');
-    })
+    });
 
     it('should update state districts on change in input', () => {
-      wrapper = mount(<App />)
+      wrapper = mount(<App />);
       let event = { target: { value: 'COL' } };
 
       expect(wrapper.state().districts.length).toEqual(2);
@@ -98,76 +102,90 @@ describe('App', () => {
 
       expect(wrapper.state().districts.length).toEqual(1);
       expect(wrapper.state().districts[0].location).toEqual('COLORADO');
-    })
-  })
+    });
+  });
 
   describe('handleClick', () => {
     it('should call findByName with argument of district on districtRepository', () => {
       wrapper.instance().handleClick('COLORADO');
-      expect(wrapper.state().districtRepository.findByName).toHaveBeenCalledWith('COLORADO')
-    })
+      expect(
+        wrapper.state().districtRepository.findByName
+      ).toHaveBeenCalledWith('COLORADO');
+    });
 
     it('should call findAverage with district location as argument', () => {
       wrapper.instance().handleClick('COLORADO');
-      expect(wrapper.state().districtRepository.findAverage).toHaveBeenCalledWith('COLORADO');
-    })
+      expect(
+        wrapper.state().districtRepository.findAverage
+      ).toHaveBeenCalledWith('COLORADO');
+    });
 
     it('should call toggleCompare with district as argument', () => {
       wrapper.instance().toggleCompare = jest.fn();
       wrapper.instance().handleClick('COLORADO');
-      expect(wrapper.instance().toggleCompare).toHaveBeenCalledWith(mockDistrict);
-    })
-  })
+      expect(wrapper.instance().toggleCompare).toHaveBeenCalledWith(
+        mockDistrict
+      );
+    });
+  });
 
   describe('findAverage', () => {
     it('should call findAverage on districtRepository', () => {
       wrapper.instance().findAverage(mockDistrict);
-      expect(wrapper.state().districtRepository.findAverage).toHaveBeenCalledWith(mockDistrict);
-    })
+      expect(
+        wrapper.state().districtRepository.findAverage
+      ).toHaveBeenCalledWith(mockDistrict);
+    });
 
-    it('should return the average of a district\'s data', () => {
+    it("should return the average of a district's data", () => {
       expect(wrapper.instance().findAverage(mockDistrict)).toEqual(0.6);
-    })
-  })
+    });
+  });
 
   describe('comparativeAnalysis', () => {
     it('should call compareDistrictAverages with two district names as arguments', () => {
-      expect(wrapper.state().districtRepository.compareDistrictAverages).not.toHaveBeenCalled();
+      expect(
+        wrapper.state().districtRepository.compareDistrictAverages
+      ).not.toHaveBeenCalled();
 
       wrapper.instance().comparativeAnalysis(mockComparison);
 
-      expect(wrapper.state().districtRepository.compareDistrictAverages).toHaveBeenCalled();
-    })
+      expect(
+        wrapper.state().districtRepository.compareDistrictAverages
+      ).toHaveBeenCalled();
+    });
 
     it('should set state with comparison and comparativeAnalysis', () => {
       wrapper.instance().setState = jest.fn();
       wrapper.instance().comparativeAnalysis(mockComparison);
 
-      expect(wrapper.instance().setState).toHaveBeenCalled()
-    })
-  })
+      expect(wrapper.instance().setState).toHaveBeenCalled();
+    });
+  });
 
   describe('toggleCompare', () => {
     it('should call removeDuplicates', () => {
-      wrapper.instance().removeDuplicates = jest.fn().mockImplementation( () => {
+      wrapper.instance().removeDuplicates = jest.fn().mockImplementation(() => {
         return mockComparison;
       });
       wrapper.instance().toggleCompare(mockDistrict);
-      expect(wrapper.instance().removeDuplicates).toHaveBeenCalledWith(mockDistrict);
-    })
+      expect(wrapper.instance().removeDuplicates).toHaveBeenCalledWith(
+        mockDistrict
+      );
+    });
 
     it('should limit comparison object to containing two district objects', () => {
       expect(Object.keys(wrapper.state().comparison).length).toEqual(0);
       wrapper.instance().handleClick('COLORADO');
       wrapper.instance().handleClick('ASPEN 20');
       expect(Object.keys(wrapper.state().comparison).length).toEqual(2);
-    })
+    });
 
     it('should set state if comparison object contains one district', () => {
       expect(Object.keys(wrapper.state().comparison).length).toEqual(0);
       wrapper.instance().handleClick('COLORADO');
       expect(Object.keys(wrapper.state().comparison).length).toEqual(1);
-    })
+    });
 
     it('should call comparativeAnalysis with comparison object as argument if comparison object contains two districts', () => {
       wrapper.instance().setState = jest.fn();
@@ -175,14 +193,14 @@ describe('App', () => {
       wrapper.instance().handleClick('COLORADO');
       wrapper.instance().handleClick('ASPEN 20');
 
-      expect(wrapper.instance().setState).toHaveBeenCalled()
-    })
-  })
+      expect(wrapper.instance().setState).toHaveBeenCalled();
+    });
+  });
 
   describe('removeDuplicates', () => {
     it('should remove duplicate keys from comparison object', () => {
       wrapper.setState({ comparison: mockComparison });
       wrapper.instance().removeDuplicates(mockDistrict);
-    })
-  })
+    });
+  });
 });

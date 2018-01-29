@@ -14,8 +14,9 @@ const Card = ({ location, data, compare, selected }) => {
   });
 
   return (
-    <div className={`card ${selected && 'highlight'}`}
-         onClick={() => compare(location)}>
+    <div
+      className={`card ${selected && 'highlight'}`}
+      onClick={() => compare(location)}>
       <h3>{location}</h3>
       <ul>{dataArray}</ul>
     </div>

@@ -22,15 +22,20 @@ describe('ComparisonCard', () => {
       },
       location: 'ASPEN 20'
     }
-  }
+  };
   let mockComparativeAnalysis = {
-    "ACADEMY 20": 0.407, 
-    "YUMA SCHOOL DISTRICT 1": 0.909, 
-    "compared": 0.448 
-  }
+    'ACADEMY 20': 0.407,
+    'YUMA SCHOOL DISTRICT 1': 0.909,
+    compared: 0.448
+  };
 
   it('should match snapshot', () => {
-    wrapper = shallow(<ComparisonCard comparativeAnalysis={mockComparativeAnalysis} districts={mockDistricts}/>)
+    wrapper = shallow(
+      <ComparisonCard
+        comparativeAnalysis={mockComparativeAnalysis}
+        districts={mockDistricts}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
-  })
-})
+  });
+});
