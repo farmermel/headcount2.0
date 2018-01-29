@@ -1,6 +1,7 @@
 # HeadCount 2.0
 
 HeadCount 2.0 is a project based around manipulating data and creating small, reusable React components. It displays statistics about kindergarten attendence in Colorado public schools. Each school has attendance data by year, formatted to be red or blue depending on whether attendance is above or below 50%. When a district is clicked it moves to the top of the page and average attendance is displayed on the center card. When a second card is clicked it is also displayed on the center card and the ratio of their averages is also displayed.
+Districts can be searched by name.
 
 This application was built using the `create-react-app` [boilerplate](https://github.com/facebookincubator/create-react-app).
 
