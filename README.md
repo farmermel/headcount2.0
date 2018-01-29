@@ -8,6 +8,10 @@ In the spirit of TDD we have created some unit tests for you to start off with. 
 
 This application was built using the `create-react-app` boilerplate. This boilerplate provides a lot of build in content and dependencies for free. Take a few minutes to read through [the documentation](https://github.com/facebookincubator/create-react-app), and remember to refer back to these docs if you run into unexpected issues.  
 
+## Our Layout
+
+![Our Layout](https://i.imgur.com/NzVW5UG.png)
+
 ## Set Up
 
 Fork this project
